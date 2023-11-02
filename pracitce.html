@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Animations</title>
+
+  <style>
+/* <![CDATA[ */
+div {
+  height: 2em;
+  width: 50%;
+  border: 1px solid black;
+  background-color: black;
+  color: yellow;
+}
+
+.animate {
+  animation-name: slide-right;
+  animation-duration: 2s;
+  /* Preserve the effect of the animation at ending */
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+
+  from {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: 110px;
+    opacity: 0.5;
+  }
+
+  to {
+    margin-left: 200px;
+    opacity: 0.2;
+  }
+}
+
+/* ]]> */
+  </style>
+
+  <script>
+/* <![CDATA[ */
+
+function DoAnimation() {
+  var targetElement = document.getElementById("target");
+  targetElement.className = "animate";
+}
+/* ]]> */
+  </script>
+</head>
+<body>
+  <h1>CSS Animations</h1>
+  <div id="target">Super div</div>
+  <button onclick="DoAnimation();">Go</button>
+</body>
+</html>
+
+
+https://www.svgrepo.com/vectors/scissors/
+https://www.svgrepo.com/svg/378869/rock
+https://pixabay.com/photos/s%C3%BCtterlin-handwriting-typography-1362879/
+https://www.svgrepo.com/svg/414345/fight
